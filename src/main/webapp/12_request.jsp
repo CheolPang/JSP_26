@@ -7,7 +7,7 @@
 <title>12_request</title>
 </head>
 <body>
-	<form action="12_process.jsp">
+	<form action="12_process.jsp" method="post">
 		<p>아이디 : <input type="text" name="id"/></p>
 		<p>비밀번호 : <input type="password" name="pw"/></p>
 		<p><input type="submit" value="전송"/></p>
