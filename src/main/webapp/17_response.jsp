@@ -4,13 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>useBean</title>
+<title>17_response</title>
 </head>
 <body>
-	<h4>구구단 출력하기</h4>
-	<jsp:useBean id="bean" class="com.dao.GuGuDan"/>
 	<%
-		out.println(bean.process(5));
+		response.sendError(404, "요청 페이지를 찾을 수 없음");
 	%>
 </body>
 </html>

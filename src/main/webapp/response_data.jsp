@@ -4,13 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>useBean</title>
+<title>response_data</title>
 </head>
 <body>
-	<h4>구구단 출력하기</h4>
-	<jsp:useBean id="bean" class="com.dao.GuGuDan"/>
-	<%
-		out.println(bean.process(5));
-	%>
+	<% response.sendRedirect("https://google.com/"); %>
 </body>
 </html>

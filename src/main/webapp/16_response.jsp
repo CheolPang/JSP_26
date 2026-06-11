@@ -4,13 +4,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>useBean</title>
+<title>16_response</title>
 </head>
 <body>
-	<h4>구구단 출력하기</h4>
-	<jsp:useBean id="bean" class="com.dao.GuGuDan"/>
+	<p>이 페이지는 5초마다 새로고침됩니다.</p>
 	<%
-		out.println(bean.process(5));
+		response.setIntHeader("refresh", 5);
 	%>
+	<p><%=new java.util.Date() %>
 </body>
 </html>

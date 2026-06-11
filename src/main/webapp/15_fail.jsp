@@ -4,13 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>useBean</title>
+<title>15_fail</title>
 </head>
 <body>
-	<h4>구구단 출력하기</h4>
-	<jsp:useBean id="bean" class="com.dao.GuGuDan"/>
-	<%
-		out.println(bean.process(5));
-	%>
+	관리자 로그인 실패!
+	<br>
+	<a href="15_response.jsp"><button>재로그인</button></a>
 </body>
 </html>
