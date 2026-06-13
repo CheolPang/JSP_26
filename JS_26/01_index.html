@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>01_html</title>
+</head>
+<body>
+	<h1>문서객체모델</h1>
+    <p>CSS에서는 대상에 접근하기 위하여 선택자를 사용했지만 javascript에서는 문서객체모델을 사용합니다.</p>
+    <h2>노드란 문서상의 객체를 구분짓는 하나하나의 덩어리를 말하며 문서객체모델에는 여러노드가 있습니다.</h2>
+    <ul>
+        <li>element node 요소노드</li>
+        <li>attribute node 속성노드</li>
+        <li>text node 텍스트노드</li>
+    </ul>
+    <h2>노드는 새로운 것이 아닙니다.</h2>
+    <ul>
+        <li>지금까지 다루었던 태그들 h1, li, p들이 요소노드입니다.</li>
+        <li>html lang="ko"에서의 lang이 속성노드입니다.</li>
+        <li>요소노드가 감싸고 있는 컨텐츠가 텍스트 노드입니다.</li>
+    </ul>
+    <script>
+    	const btn = document.querySelector("ul:nth-of-type(2) li:first-child");
+    	btn.addEventListener("click",() => {
+    		btn.innerHTML = "클릭하여 변경";
+    		btn.style.color="red"
+    		btn.style.fontSize="20px"
+    		btn.style.backgroundColor="skyblue"
+    		btn.style.cursor="pointer"
+    	})
+    </script>
+</body>
+</html>

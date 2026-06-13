@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+	<h1>보이고 숨기기</h1>
+	<mark>이벤트 진행중</mark>
+	<button>첫 번째 이벤트 보기</button>
+	&nbsp;
+	<button>첫 번째 이벤트 숨기기</button>
+	<button>보이고 숨기기</button>
+	
+	<div class="popup">
+		<button class="closeBtn">X</button>
+		<img src="https://postfiles.pstatic.net/MjAyMTA4MDlfMTYx/MDAxNjI4NDk2MTc2NDQ3._8c321vO9eEDyDeHYqHvdFdHr2ZLr0GJnoI6PCNHYqkg.OR3S6lR87TzQwyT8Q9m2skwB3QenJD6Fo2D6mZo15GEg.PNG.7094design/7094%EB%94%94%EC%9E%90%EC%9D%B8-%EB%A6%AC%EB%B7%B0%EC%9D%B4%EB%B2%A4%ED%8A%B8.png?type=w966" alt="" id="eventpopup">
+	</div>
+
+	
+	<img src="./img/pungyeong.jpg" alt="" width="100%" id="event1_img">
+	
+	<p>이벤트에 참여해주세요.</p>
+	<img src="https://www.google.com/logos/doodles/2026/world-cup-2026-the-art-of-the-nutmeg-612-6753651837111110.3-la22242a.gif" alt="" width="100%" id="event2_img">
+	<script>
+		$(document).ready(function(){
+			const body = $("body")
+			const image = $("#eventpopup")
+			const close = $(".closeBtn")
+			const popup = $(".popup")
+			body.css({"background-color": "black", "color": "white", "overflow": 'hidden'});
+			popup.css({"z-index": "1000", "position": "fixed"})
+			close.css({"z-index": "10000", "position": "fixed", "left": "150px"})
+			close.click(function(){
+				popup.hide()
+				body.css({"background-color": "white", "color": "black", "overflow": '',});
+			})
+		})
+	</script>
+</body>
+</html>
