@@ -4,25 +4,27 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>23_validation</title>
-<script type="text/javascript">
+<title>24_validation.jsp</title>
+<script>
 	function checkForm(){
 		var form = document.loginForm;
-		if(form.id.value==""){
-			alert("아이디를 입력해주세요");
+		/* 데이터의 길이 확인하기 */
+		if(form.id.value.length < 4 || form.id.value.length > 12){
+			alert("아이디는 4~12자 이내로 입력 가능합니다.");
 			form.id.focus();
 			return false;
-		} else if(!form.pw.value){
-			alert("비밀번호를 입력해주세요");
+		}
+		if(form.pw.value.length < 4){
+			alert("비번은 4자 이상으로 입력 가능합니다.");
 			form.pw.focus();
-			return false;
+			return;
 		}
 		form.submit();
 	}
 </script>
 </head>
 <body>
-	<form action="23_process.jsp" method="post" name="loginForm">
+	<form action="24_process.jsp" method="post" name="loginForm">
 		<p>아이디 : <input type="text" name="id"/></p>
 		<p>비밀번호 : <input type="password" name="pw"/></p>
 		<p><input type="button" value="전송" onclick="checkForm()"/></p>
