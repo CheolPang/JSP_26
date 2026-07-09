@@ -30,9 +30,7 @@
 					})
 					
 					var urlValue = "https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=7f15d8077a11311704a6b9142f74f4e8&targetDt="
-					
 					var date = new Date()
-					
 					var year = date.getFullYear()
 					var month = date.getMonth() + 1
 					var date = date.getDate() - 1
